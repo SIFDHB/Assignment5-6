@@ -1,0 +1,23 @@
+- FUNCTION -
+
+Function ExtendedEuclideanAlgorithm(a, b): #1
+    If b is 0, then: #2
+        Return (a, 1, 0) #3
+    End If
+
+    (gcd, x1, y1) = ExtendedEuclideanAlgorithm(b, a mod b) #4
+
+    x = y1 #5
+    y = x1 - (a div b) * y1 #6
+
+    Return (gcd, x, y) #7
+End Function
+
+- NUMBERED COMMENTS -
+#1 - ExtendedEuclideanAlgorithm takes two values (a and b) as input and also calculates the coefficients x and y.
+#2 - Checks if b is 0. If b is 0, the algorithm reaches its base case.
+#3 - Returns a tuple of (a, 1, 0) when b is 0.
+#4 - Makes a recursive call to ExtendedEuclideanAlgorithm with b and a mod b as parameters.
+#5 - Sets x to the value of y1 from the recursive call, following the back substitution method to calculate the new x coefficient.
+#6 - Calculates the new y coefficient using the formula y = x1 - (a div b) * y1.
+#7 - Returns a tuple containing the GCD of a and b, along with the coefficients x and y.
