@@ -54,16 +54,24 @@ def EuclideanAlgorithm(a, b):
     # Return a as the GCD
     return a
 
+
 def GetNumber(type):
-    while True:
+    """
+    Prompt the user to input a positive integer. We make sure that the input is not negative and is an integer.
+
+    :param type: A string indicating the type or role of the number being requested (e.g., 'first', 'second').
+    :returns: A positive integer input by the user.
+    """
+
+    while True:  # Loop indefinitely until input is verified
         try:
-            result = int(input(f"Write down the {type} number: "))
-            if result < 0:
+            result = int(input(f"Write down the {type} number: "))  # Asks the user for an input
+            if result < 0:  # Check if the input is negative
                 raise Exception("Invalid number. No negative numbers allowed.")
-            return result
-        except ValueError:
+            return result  # Return the valid input
+        except ValueError:  # Handle cases where conversion to integer fails
             print(TextColor("Invalid input. Please use positive integers only.", color="red"))
-        except Exception as Error:
+        except Exception as Error:  # Handle any exceptions raised during validation
             print(TextColor(Error.args[0], color="red"))
 
 a, b = GetNumber("first"), GetNumber("second")
