@@ -1,0 +1,19 @@
+- FUNCTION -
+
+Function EuclideanAlgorithm(a, b): #1
+    While (b is not 0), do: #2
+        New variable "temp", Set temp to [b] #3
+        Set b to [a mod b] (aka [a % b]) #4
+        Set a to temp #5
+    End While
+    Return a #6
+End Function
+
+- NUMBERED COMMENTS -
+
+#1 - EuclideanAlgorithm takes two values (a and b) as input.
+#2 - The loop iterates as long as b is not equal to zero. At which point the value 'a' will hold the greatest common divisor (GCD).
+#3 - A temporary variable temp is used to store the value of b.
+#4 - Update b to be the remainder of the division of a by b.
+#5 - Update a to be the previous value of b. This shifts the numbers down for the next iteration.
+#6 - Once b becomes zero, the loop exits. and the function returns a which holds the greatest common divisor.
