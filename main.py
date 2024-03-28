@@ -79,4 +79,4 @@ a, b = GetNumber("first"), GetNumber("second")
 # Next, we do the Euclidean Algorithm
 gcd = EuclideanAlgorithm(a, b)
 # Finally, we print the result and exit
-print(TextColor(f"The Greatest Common Divisor (GCD) of {a} and {b} is: ", "white") + TextColor(str(gcd), "yellow"))
+print(f"The Greatest Common Divisor (GCD) of {a} and {b} is: " + TextColor(str(gcd), "yellow"))
