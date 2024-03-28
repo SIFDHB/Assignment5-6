@@ -54,7 +54,6 @@ def EuclideanAlgorithm(a, b):
     # Return a as the GCD
     return a
 
-
 def GetNumber(type):
     """
     Prompt the user to input a positive integer. We make sure that the input is not negative and is an integer.
@@ -63,17 +62,21 @@ def GetNumber(type):
     :returns: A positive integer input by the user.
     """
 
-    while True:  # Loop indefinitely until input is verified
+    while True:  # Loops indefinitely until input is verified
         try:
             result = int(input(f"Write down the {type} number: "))  # Asks the user for an input
-            if result < 0:  # Check if the input is negative
+            if result < 0:  # Checks if the input is negative
                 raise Exception("Invalid number. No negative numbers allowed.")
-            return result  # Return the valid input
-        except ValueError:  # Handle cases where conversion to integer fails
+            return result  # Returns the valid input
+        except ValueError:  # Handles cases where conversion to integer fails
             print(TextColor("Invalid input. Please use positive integers only.", color="red"))
-        except Exception as Error:  # Handle any exceptions raised during validation
+        except Exception as Error:  # Handles any exceptions raised during validation
             print(TextColor(Error.args[0], color="red"))
 
+# The main gist of the code.
+# First, we get the inputs.
 a, b = GetNumber("first"), GetNumber("second")
+# Next, we do the Euclidean Algorithm
 gcd = EuclideanAlgorithm(a, b)
+# Finally, we print the result and exit
 print(TextColor(f"The Greatest Common Divisor (GCD) of {a} and {b} is: ", "white") + TextColor(str(gcd), "yellow"))
