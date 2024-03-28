@@ -23,7 +23,7 @@ def TextColor(text="", color="white", continuous=True):
     :param text: The text to format.
     :param color: The color name (e.g., 'black', 'blue', 'green', etc.).
     :param continuous: Flag that implements ANSI_ESCAPE at the end of the string
-    :returns: The formatted text.
+    :return: The formatted text.
     """
 
     # Check if the provided color is a valid color
@@ -37,10 +37,10 @@ def EuclideanAlgorithm(a, b):
     """
     This function implements the Euclidean Algorithm to find the Greatest Common Divisor (GCD) of two integers.
 
-    :param a: (int) First positive integer
-    :param b: (int) Second positive integer
+    :param a: First positive integer
+    :param b: Second positive integer
 
-    :returns a: (int) GCD Result
+    :return: GCD Result
     """
 
     # Loop until b becomes 0
@@ -59,7 +59,7 @@ def GetNumber(type):
     Prompt the user to input a positive integer. We make sure that the input is not negative and is an integer.
 
     :param type: A string indicating the type or role of the number being requested (e.g., 'first', 'second').
-    :returns: A positive integer input by the user.
+    :return: A positive integer input by the user.
     """
 
     while True:  # Loops indefinitely until input is verified
